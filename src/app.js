@@ -1,89 +1,70 @@
-// Write your code on this file. Please don't change the existing code
-// unless absolutely needed.
+<!DOCTYPE html>
+<html lang="en">
 
-//Initial price of the burger
-var wholeWheatBun = 10;
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <link rel="stylesheet" href="style.css" />
+  <title>BRRRGRRR</title>
+</head>
 
-//Ingredients of the burger along with the price
-// Clue: the name is same as the textcontent of the button. Will be useful later on :)
-var ingredients = {
-  Patty: 80,
-  Cheese: 10,
-  Tomatoes: 20,
-  Onions: 20,
-  Lettuce: 20
-};
+<body>
+  <header class="header">
+    <img src="/img/index.svg" class="Group-4" />
+    <img src="/img/group-5.svg" class="Group-5" />
+  </header>
+  <section class="Rectangle1">
+    <img src="/img/group-2.svg" class="Group-2" />
+    <img src="/img/group-7.svg" class="Group-7" />
+    <div class="menu">
+      <img src="/img/group-16.svg" class="Group-16" />
+      <div class="menu-container">
+        <h3>Ingredients</h3>
+        <p class="items">Patty</p>
+        <p class="items">Cheese</p>
+        <p class="items">Tomatoes</p>
+        <p class="items">Onions</p>
+        <p class="items">Lettuce</p>
+      </div>
+    </div>
+    <div class="burger">
+      <img src="/img/Burger/Top@2x.png" alt="" />
+      <img id="patty" src="/img/Burger/Patty.svg" alt="" />
+      <img id="cheese" src="/img/Burger/Cheese@2x.png" alt="" />
+      <img id="tomatoes" src="/img/Burger/Tomato@2x.png" alt="" />
+      <img id="onions" src="/img/Burger/Onion@2x.png" alt="" />
+      <img id="lettuce" src="/img/Burger/Lettuce@2x.png" alt="" />
+      <img src="/img/Burger/Bun 1@2x.png" alt="" />
+    </div>
+  </section>
+  <footer class="footer">
+    <img src="/img/group-3.svg" class="Group-3" />
+    <div class="Rectangle2">
+      <div class="container-text">Choose what goes into your burger</div>
+      <div class="button-container">
+        <div class="button btn-patty active">Patty</div>
+        <div class="button btn-cheese active">Cheese</div>
+        <div class="button btn-tomatoes active">Tomatoes</div>
+        <div class="button btn-onions active">Onions</div>
+        <div class="button btn-lettuce active">Lettuce</div>
+      </div>
+    </div>
+    <div class="Rectangle3">
+      <div class="Rectangle4">
+        <p>Current Order Total</p>
+        <p class="price-details">INR 170</p>
+        <p>To Pay</p>
 
-//Current state of the ingredients in the burger
-var state = {
-  Patty: true,
-  Cheese: true,
-  Tomatoes: true,
-  Onions: true,
-  Lettuce: true
-};
+        <div class="Rectangle5">
+          <a href="https://www.bk.com/">Pay and receive order</a>
 
-// This function renders the entire screen everytime the state changes accordingly
-function renderAll() {
-  renderPatty();
-  renderCheese();
-  renderTomatoes();
-  renderOnions();
-  renderLettuce();
-  renderButtons();
-  renderIngredientsBoard();
-  renderPrice();
-}
+        </div>
+      </div>
+    </div>
+  </footer>
+  <div class="footers">Made with <img src="./img/prograd-heart.svg"> by ProGrad Juniour Jazllyn</div>
+  <script src="app.js"></script>
+</body>
 
-function renderPatty() {
-  let patty = document.querySelector("#patty");
-  //you can also use getElementById
-  if (state.Patty) {
-    patty.style.display = "inherit";
-  } else {
-    patty.style.display = "none";
-  }
-}
-
-function renderCheese() {
-  //Trial 1 - Change the visibility of cheese based on state by manipulating the DOM
-}
-
-function renderTomatoes() {
-  //Trial 1 - Change the visibility of Tomatoes based on state by manipulating the DOM
-}
-
-function renderOnions() {
-  //Trial 1 - Change the visibility of Onions based on state by manipulating the DOM
-}
-
-function renderLettuce() {
-  //Trial 1 - Change the visibility of Lettuce based on state by manipulating the DOM
-}
-
-document.querySelector(".btn-patty").onclick = function () {
-  state.Patty = !state.Patty;
-  renderAll();
-};
-
-// Trial 2 - Setup event listener for the cheese button
-
-
-// Trial 2 - Setup event listener for the tomatoes button
-
-
-// Trial 2 - Setup event listener for the onion button
-
-
-// Trial 2 - Setup event listener for the lettuce button
-
-
-//Challenge 1 - Add/Remove the class active to the buttons based on state
-
-
-//Challenge 2 - Render only the items selected in the ingredients board based on the state
-
-
-//Judgement 1
-//In the p element having price-details as the class, display the calculated
-//price based on ingredients
+</html>
